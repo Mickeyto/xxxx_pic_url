@@ -112,7 +112,7 @@ def download_pic(url):
 
 def write_page_file(start_page, end_page):
     content = (str(start_page) + '-' + str(end_page)).encode('utf-8')
-    with open(f'./page_history.txt', 'wb') as f:
+    with open(f'./page_love_history.txt', 'wb') as f:
         # for data in s.iter_content(128):
         f.write(content)
 
