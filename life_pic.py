@@ -82,7 +82,7 @@ def get_pics(pid, page):
 
 
 def write_urlfile(url):
-    with open(f'./ch_sexual_love_urls.txt', 'a+') as f:
+    with open(f'./ch_sexual_life_urls.txt', 'a+') as f:
         f.write(url + "\n")
         f.close()
 
@@ -97,7 +97,7 @@ def download_pic(url):
 
     s = requests.get(pic_info['url'], headers=headers, stream=True)
     # 下载图片的保存路径
-    image_path = "./ch_sexual_love/Images/" + pic_info['title'] + '/'
+    image_path = "./ch_sexual_life/Images/" + pic_info['title'] + '/'
 
     if not os.path.isdir(image_path):
         os.makedirs(image_path)
