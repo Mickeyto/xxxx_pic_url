@@ -70,7 +70,10 @@ def get_pics(pid, page):
     if len(match_ti) < 1:
         match_ti = re.findall('<h1 class="ph z">(.*)</h1>', r)
 
-    title = match_ti[0]
+    if len(match_ti) < 1:
+        title = time.time()
+    else:
+        title = match_ti[0]
 
     url_arr = []
     url_list = list(set(matches_list))
